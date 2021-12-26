@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suveett's Kitties</title>
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <script src="assets/bootstrap/js/popper.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/web3.min.js"></script>
+
+  <script src="assets/js/abi.js"></script>
+  <script src="assets/js/interface.js"></script>
+
+  <link rel="stylesheet" href="assets/css/mystyle.css">
+  <link rel="stylesheet" href="assets/css/cats.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <link rel="stylesheet" href="assets/css/colors.css">
+  <link rel="stylesheet" href="assets/css/factory.css">
+  <!-- *** TODO: Add markeplace's own css here!??? -->
+  <link rel="stylesheet" href="assets/css/catBox.css">
+  <link rel="stylesheet" href="assets/css/frontend.css">
+</head>
+  <body>
+    <!-- Top Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="catalogue.html">My Catalogue</a>
+            <a class="nav-item nav-link active" href="marketplace.html">Kitty-Market<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="index.html" id="factoryNavLink">Kitty-Factory</a>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Main page header -->
+    <div class="container p-1" style="margin-top: 2vh;margin-bottom: 6vh;">
+      <div align="center">
+          <h1 class="c-white">The Kitty-Market</h1>
+          <p class="c-white">Kitties for sale that you can buy</p>
+        </div>
+        <div class="row">
+        <div class="col-lg-4 mt-1 ml-1"></div>
+          <div class="col mt-1 ml-1"></div>
+          <div class="col-lg-4 mt-1">
+          <form>
+            <div class="form-group row ml-1">
+               <button type="button" class="btn btn-success" onclick="window.location.reload()"
+                   aria-describedby="buyHelp">Refresh</button>
+              </div>
+              <small id="buyHelp" class="form-text ml-2">Reloads the marketplace with kitties for sale</small>
+              <p id="buyError"></p>
+            </form>
+          </div>
+        <div id="kittyTransaction" class="alert alert-success" role="alert" style="display:none"></div>
+        </div>
+
+        <div class="row" id="rowOfCats">    <!-- Cats to be added dynamically here! -->
+      </div>
+    </div>
+    <footer align="left">
+      <p>Suveett Kalra, June 2021</p>
+    </footer>
+
+  </body>
+
+  <script src="./marketplaceLogic.js"></script>
+  <script src="./sharedLogic.js"></script>
+
+  <script src="assets/js/colors.js"></script>
+  <script src="assets/js/catSettings.js"></script>
+  <script src="assets/js/catFactory.js"></script>
+  <script src="assets/js/catConstants.js"></script>
+  <script src= "./helperFunctions.js"></script>
+
+</html>
